@@ -1,7 +1,8 @@
 
 import './App.css';
-import HomePage from './homepage.component';
-import "./homepage.styles.scss"
+import HomePage from './pages/homepage/homepage.component';
+import "./pages/homepage/homepage.styles.scss"
+import './components/menu-item/menu-item.styles.scss'
 
 function App() {
   return (
