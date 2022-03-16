@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Navigate } from "react-router-dom";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
@@ -27,6 +27,7 @@ class SignUp extends React.Component {
     }
     try{
     const {user} = await auth.createUserWithEmailAndPassword(email,password)
+    
     await createUserProfileDocument(user, {displayName})
     this.setState({
       displayName: "",
@@ -34,6 +35,7 @@ class SignUp extends React.Component {
       password: "",
       confirmPassword: "",
     })
+    
 }
 catch (error){
     console.error(error);
